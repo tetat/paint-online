@@ -140,9 +140,12 @@ colorPicker.addEventListener("change", () => {
 });
 
 clearCanvas.addEventListener("click", () => {
+    const agree = window.confirm("Are you sure you want to clear?");
     // clearing whole canvas
+    if (agree) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     setCanvasBackground();
+    }
 });
 
 saveImg.addEventListener("click", () => {
